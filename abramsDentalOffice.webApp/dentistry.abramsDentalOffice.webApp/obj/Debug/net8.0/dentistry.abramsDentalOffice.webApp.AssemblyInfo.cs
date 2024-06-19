@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dentistry.abramsDentalOffice.webApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c221d9bf08b6016efbfb3c0ee2601162020d1ed2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdd7c939e2e861887c25cc990ff7d9f6166ef942")]
 [assembly: System.Reflection.AssemblyProductAttribute("dentistry.abramsDentalOffice.webApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dentistry.abramsDentalOffice.webApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
