@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\dentistry.abramsDentalOffice.webApp.props" />
+</Project>
