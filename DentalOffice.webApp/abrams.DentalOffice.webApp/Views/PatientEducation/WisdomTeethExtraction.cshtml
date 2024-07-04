@@ -1,0 +1,354 @@
+﻿@{
+    ViewData["Title"] = "Wisdom Teeth Extraction";
+}
+
+@model abrams.DentalOffice.webApp.Models.InformationCardViewModel
+
+<div>
+    <hr class="my-1" style="border-top: 8px solid #696b6b;">
+</div>
+<div class="container">
+    <div class="row">
+
+        <!-- Column 1 -->
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center" id="@ViewData["Title"]">
+            <img class="img-fluid" src="~/media/layout/logo.jpg" alt="Logo" />
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+            <h3 class="display-4">
+                @ViewData["theTitle"]
+            </h3>
+            <p class="pt-2 cardBody">
+                @ViewData["theBody"]
+            </p>
+        </div>
+    </div>
+</div>
+
+<div>
+    <hr class="my-4" style="border-top: 8px solid #696b6b;">
+</div>
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+
+        <!-- Column 1 -->
+        <div class="col-12 col-md-8 patientpg pb-2 pt-1 ps-3 pe-3">
+            
+            @* Display the info as bullet points, paragraphs, or a mix if these as needed *@
+            @for (int i = 0; i < Model.CardOne.Count; i++)
+            {
+                var card = Model.CardOne[i];
+                <h3 class="pt-4 subsubtitle" id="sec01-@(i+1)">
+                    @card.Header
+                </h3>
+                <div class="longLine pb-1"></div>
+                <div>
+                    
+                    @if (card.IsBullet)
+                    {
+                        @if (card.IsFirstBullet && card.Body.Count > 0)
+                        {
+                            <p>@card.Body[0]</p>
+                        }
+
+                        <ul>
+                            @for (int j = (card.IsFirstBullet ? 1 : 0); j < card.Body.Count - (card.IsLastBullet ? 1 : 0); j++)
+                            {
+                                <li class="pb-2">@card.Body[j]</li>
+                            }
+                        </ul>
+
+                        @if (card.IsLastBullet && card.Body.Count > 0)
+                        {
+                            <p>@card.Body[^1]</p>
+                        }
+                    }
+                    else
+                    {
+                        @foreach (var item in card.Body)
+                        {
+                            <p>
+                                @item<br />
+                            </p>
+                        }
+                    }
+                </div>
+            }
+        </div>
+
+
+
+
+        <!-- Column 2 -->
+        <div class="col-12 col-md-4">
+            <div>
+                <div class="patientpg p-2 ">
+                    <h3 class="pt-2 subsubtitle">
+                        Related Topics
+                    </h3>
+                    <div class="longLine pb-1"></div>
+                    <ul>
+                        <li class="pb-2">Composite Fillings</li>
+                        <li class="pb-2">Dental Crowns</li>
+                        <li class="pb-2">Dental Implant Surgery</li>
+                        <li class="pb-2">Oral Cancer Screening</li>
+                        <li class="pb-2">Oral Surgery</li>
+                        <li class="pb-2">Root Canal Treatment</li>
+                        <li class="pb-2">Root Scaling and Planing</li>
+                        <li class="pb-2">Tooth Extraction</li>
+                    </ul>
+                </div>
+                <div class="cardbglight mt-5 p-3">
+                    <h3 class="subsubtitle">
+                        Explore additional topics covered on our website
+                    </h3>
+
+                    <div class="longLine pb-1"></div>
+                    <ul class="pt-2">
+                        <li class="pb-2">Dental Procedures</li>
+                        <li class="pb-2">Routine Dental Procedures</li>
+                        <li class="pb-2">Cosmetic Dental Services</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container pt-5 mt-3">
+    <div class="row">
+        <!-- Column 1 -->
+        <div class="col-12 col-md-8 pb-2 pt-1">
+
+            @* Display the info as bullet points, paragraphs, or a mix if these as needed *@
+            @for (int i = 0; i < Model.CardTwo.Count; i++)
+            {
+                var card = Model.CardTwo[i];
+                <h3 class="pt-4 subsubtitle" id="sec02-@(i+1)">
+                    @card.Header
+                </h3>
+                <div class="longLine pb-1"></div>
+                <div>
+                    
+                    @if (card.IsBullet)
+                    {
+                        @if (card.IsFirstBullet && card.Body.Count > 0)
+                        {
+                            <p>@card.Body[0]</p>
+                        }
+
+                        <ul>
+                            @for (int j = (card.IsFirstBullet ? 1 : 0); j < card.Body.Count - (card.IsLastBullet ? 1 : 0); j++)
+                            {
+                                <li class="pb-2">@card.Body[j]</li>
+                            }
+                        </ul>
+
+                        @if (card.IsLastBullet && card.Body.Count > 0)
+                        {
+                            <p>@card.Body[^1]</p>
+                        }
+                    }
+                    else
+                    {
+                        @foreach (var item in card.Body)
+                        {
+                            <p>
+                                @item<br />
+                            </p>
+                        }
+                    }
+                </div>
+            }
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-12 col-md-4"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container pt-5 mt-3">
+    <div class="row">
+        <!-- Column 1 -->
+        <div class="col-12 col-md-8 pb-2 pt-1 cardbgdark ps-4 pe-2">
+
+            <div>
+                <h3 class="text-center pt-3 subsubtitle">
+                    Questions Answered on This Page
+                </h3>
+                <div class="longLine pb-1"></div>
+                <p>
+                    Q. What happens during a wisdom tooth extraction?
+                </p>
+                <p>
+                    Q. What do I need to do after a wisdom tooth extraction?
+                </p>
+                <p>
+                    Q. When is a wisdom tooth extraction necessary?
+                </p>
+            </div>
+            <div>
+                <h3 class="text-center pt-3 subsubtitle">
+                    People Also Ask
+                </h3>
+                <div class="longLine pb-1"></div>
+                <p>
+                    Q. Which tooth replacement is right for me?
+                </p>
+                <p>
+                    Q. Can dental bridges replace my missing teeth and restore my smile?
+                </p>
+                <p>
+                    Q. Are dental implants better than dentures or dental bridges?
+                </p>
+            </div>
+        </div>
+        <!-- Column 2 -->
+        <div class="col-12 col-md-4"></div>
+    </div>
+</div>
+
+
+
+
+<div class="container pt-5 mt-3">
+    <div class="row">
+        <!-- Column 1 -->
+        <div class="col-12 col-md-8 pb-2 pt-1 cardbglight">
+            <div class="row ps-2 pe-2">
+                <h3 class="subsubtitle pt-4">
+                    @ViewData["cardThreeTitle"]
+                </h3>
+                <div class="longLine"></div>
+
+                @* Left column *@
+                <div class="col col-12 col-md-6">
+                    @for (int i = 0; i < Model.CardThree.Count; i += 2)
+                    {
+                        var card = Model.CardThree[i];
+                        <h3 class="pb-1 pt-3 subsubtitle">
+                            @card.Header
+                        </h3>
+                        <p class="pb-4">
+                            @foreach (var item in card.Body)
+                            {
+                                @item
+                                <br />
+                            }
+                        </p>
+                        @if (i != Model.CardThree.Count - 2)
+                        {
+                            <div class="longLine pb-1"></div>
+                        }
+                    }
+                </div>
+
+                @* Right column *@
+                <div class="col col-12 col-md-6">
+                    @for (int i = 1; i < Model.CardThree.Count; i += 2)
+                    {
+                        var card = Model.CardThree[i];
+                        <h3 class="pb-1 pt-3 subsubtitle">
+                            @card.Header
+                        </h3>
+                        <p class="pb-4">
+                            @foreach (var item in card.Body)
+                            {
+                                @item
+                                <br />
+                            }
+                        </p>
+                        @if (i != Model.CardThree.Count - 1)
+                        {
+                            <div class="longLine pb-1"></div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-12 col-md-4"></div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container pt-5 mt-3">
+    <div class="row pb-4">
+        <!-- Column 1 -->
+        <div class="col-12 col-md-8 pb-2 pt-1 ps-4 pe-2 cardbgdark">
+
+            <div class="">
+                <h3 class="pt-3 subsubtitle">
+                    Helpful Related Links
+                </h3>
+                <div class="longLine pb-1"></div>
+                <ul>
+                    <li class="pb-2">
+                        <a href="https://www.ada.org/about">
+                            American Dental Association (ADA). Glossary of Dental Terms. 2015
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div>
+                <h3 class="pt-3 subsubtitle">
+                    About our business, license, and website security
+                </h3>
+                <div class="longLine pb-1"></div>
+                <ul>
+                    
+                    <li  class="pb-2">
+                        Elliott Abrams Dental Office was established in 2008.
+                    </li>
+                    
+                    
+                    <li class="pb-2">
+                        We accept the following payment methods: American Express, Cash, Check, Discover, MasterCard, and Visa
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- Column 2 -->
+        <div class="col-12 col-md-4"></div>
+    </div>
+
+    <div class="longLine pb-1"></div>
+
+    <h5 class="pt-2 pb-3">
+        Back to top of
+        <a href="#@ViewData["Title"]">
+            @ViewData["Title"]
+        </a>
+    </h5>
+
+
+</div>
