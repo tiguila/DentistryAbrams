@@ -307,5 +307,28 @@
     </script>
 
 
+    @* This .js code listens for scroll events, and based on the scroll direction, toggles the .hidden and .visible classes on the navbar *@
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbar = document.getElementById("navbar");
+            var lastScrollTop = 0;
+
+            window.addEventListener("scroll", function () {
+                var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (currentScroll > lastScrollTop) {
+                    // Scrolling down
+                    navbar.classList.add("hidden");
+                    navbar.classList.remove("visible");
+                } else {
+                    // Scrolling up
+                    navbar.classList.remove("hidden");
+                    navbar.classList.add("visible");
+                }
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+        });
+    </script>
+
+
 </body>
 </html>
