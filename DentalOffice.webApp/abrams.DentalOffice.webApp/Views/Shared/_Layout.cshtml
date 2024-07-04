@@ -3,75 +3,141 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - abrams.DentalOffice.webApp</title>
+    <title>@ViewData["Title"] - pu</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/abrams.DentalOffice.webApp.styles.css" asp-append-version="true" />
-    
+
     @*Required TAG to use Font Awesome icons throughout this project*@
     <link href="~/font-awesome/css/all.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="~/css/index.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="~/css/patientEducation.css" rel="stylesheet"/>
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">abrams.DentalOffice.webApp</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        
-                        @*Navigation bar links (icons) - Start *@
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">General</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Dental Implants</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Cosmetic</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Financing</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Contact</a>
-                        </li>
-                        @*Navigation bar links (icons) - End *@
 
 
-                    </ul>
-                </div>
+    @* Nav-bar styling and any other JavaScript logics, please see site.css and the bottom of _Layout.cshtml for the <script> tag. *@
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top fixed-navbar" id="navbar">
+        <div class="container-fluid">
+            <a asp-controller="Home" asp-action="Index" class="navbar-brand">exit</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button> 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Index" class="nav-link active" aria-current="page">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" asp-controller="Controller" asp-action="PageName" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Patient Education
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul>
+                                <li><a asp-controller="PatientEducation" asp-action="SleepApnea" class="dropdown-item">Do I Have Sleep Apnea</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="OralHygieneBasics" class="dropdown-item">Oral Hygiene Basics</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="ChippedTooth" class="dropdown-item">What Should I Do If I Chip My Tooth</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="BleedingGums" class="dropdown-item">Why Are My Gums Bleeding</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="InvisalignOrBraces" class="dropdown-item">Which is Better Invisalign or Braces</a></li>
+                            </ul>
+                            <ul>
+                                <li><a asp-controller="PatientEducation" asp-action="AlternativeToBraces" class="dropdown-item">Alternative to Braces for Teens</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="RootCanal" class="dropdown-item">Do I Need a Root Canal</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="ReplacingMissingTeeth" class="dropdown-item">Options For Replacing Missing Teeth</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="ImproveMySmile" class="dropdown-item">What Can I Do to Improve My Smile</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="ToothExtractionNecessary" class="dropdown-item">When Is a Tooth Extraction Necessary</a></li>
+                            </ul>
+                            <ul>
+                                <li><a asp-controller="PatientEducation" asp-action="DentalAnxiety" class="dropdown-item">Dental Anxiety</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="RecedingGums" class="dropdown-item">I Think My Gums Are Receding</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="WisdomTeethExtraction" class="dropdown-item">Wisdom Teeth Extraction</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="DamagedMyDentures" class="dropdown-item">What Do I Do If I Damage My Dentures</a></li>
+                                <li><a asp-controller="PatientEducation" asp-action="BoneGraftForDentalImplants" class="dropdown-item">Will I Need a Bone Graft for Dental Implants</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown">
+                        <a asp-controller="Home" asp-action="Index" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul>
+                                <li><a asp-controller="DentalServices" asp-action="Allon4DentalImplants" class="dropdown-item">All-on-4 Dental Implants</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="ClearCorrectBraces" class="dropdown-item">Clear Correct Braces</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="DentalCheckup" class="dropdown-item">Dental Checkup</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="DentalCrownsNDentalBridges" class="dropdown-item">Dental Crowns and Dental Bridges</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="DentalImplants" class="dropdown-item">Dental Implants</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="DentalVeneersNDentalLaminates" class="dropdown-item">Dental Veneers and Dental Laminates</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="DenturesNPartialDentures" class="dropdown-item">Dentures and Partial Dentures</a></li>
+                            </ul>
+                            <ul>
+                                <li><a asp-controller="DentalServices" asp-action="EmergencyDentist" class="dropdown-item">Emergency Dentist</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="FullMouthReconstruction" class="dropdown-item">Full Mouth Reconstruction</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="InvisalignDentist" class="dropdown-item">Invisalign Dentist</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="KidFriendlyDentist" class="dropdown-item">Kid Friendly Dentist</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="LaserDentistry" class="dropdown-item">Laser Dentistry</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="Lumineers" class="dropdown-item">Lumineers</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="PediatricDentist" class="dropdown-item">Pediatric Dentist</a></li>
+                            </ul>
+                            <ul>
+                                <li><a asp-controller="DentalServices" asp-action="RootCanalTreatment" class="dropdown-item">Root Canal Treatment</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="SedationDentist" class="dropdown-item">Sedation Dentist</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="SmileMakeover" class="dropdown-item">Smile Makeover</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="SnapOnSmile" class="dropdown-item">Snap-On Smile</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="TeethWhitening" class="dropdown-item">Teeth Whitening</a></li>
+                                <li><a asp-controller="DentalServices" asp-action="ZoomTeethWhitening" class="dropdown-item">Zoom Teeth Whitening</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Privacy">Meet the Doctor</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Controller" asp-action="PageName">Patient Information</a>
+                    </li>
+
+
+
+
+
+
+                    <li class="nav-item">
+                        <a asp-controller="Controller" asp-action="PageName" class="nav-link">Smile Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a asp-controller="Controller" asp-action="PageName" class="nav-link">Contact Us</a>
+                    </li>
+
+
+
+
+
+                </ul>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 Elliott Abrams Dental Office. All Rights Reserved. Dr. Abrams is a dentist in Los Angeles offering veneers, teeth whitening, emergency dentistry, Invisalign, and more. | <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a> | <a asp-area="" asp-controller="Home" asp-action="Privacy">Sitemap</a>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    </nav>
+
+
+
+    
+    <main role="main" class="">
+        @RenderBody()
+    </main>
+    
+
+
 </body>
 </html>
