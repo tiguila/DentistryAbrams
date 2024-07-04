@@ -19,4 +19,15 @@ html {
 
 body {
   margin-bottom: 60px;
+  padding-top: 57px;
 }
+
+
+/* This will remove the default padding done by the container from _Layout.cshtml. See @RenderBody() therein. */
+.body-container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    max-width: 100%;
+} 
+
+
