@@ -31,3 +31,35 @@ body {
 } 
 
 
+
+* {
+    color: black
+}
+
+
+
+.subsubtitle {
+  color: #333333;
+  font: 25px 'freight-big-pro', serif;
+}
+
+
+.subtitleDes {
+    color: #878787;
+    font: 24px 'freight-big-pro', serif;
+}
+
+.subsubtitleDes {
+  color: #646363;
+  font: 19px 'freight-big-pro', serif;
+}
+
+
+
+.longLine {
+    min-width: 100%;
+    border-top: 1px solid rgb(210, 205, 205);
+}
+
+
+
