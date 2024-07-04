@@ -121,3 +121,43 @@ body {
 }
 /* Styling for the nav-bar multi-column drop-down - end */
 
+
+
+
+
+/* This is for sticky  navigation bar. Hide the nav-bar on scroll down and show it when scroll back up */
+.navbar.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.navbar.visible {
+  transform: translateY(0);
+  transition: transform 0.3s;
+}
+
+
+.navbar.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.navbar.visible {
+  transform: translateY(0);
+  transition: transform 0.3s;
+}
+
+
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* Adjust height as needed */
+  background-color: #333;
+  z-index: 1000; /* Ensures the navbar is on top */
+}
+
+.thecontent {
+  padding-top: 60px; /* Same as the navbar height */
+}
