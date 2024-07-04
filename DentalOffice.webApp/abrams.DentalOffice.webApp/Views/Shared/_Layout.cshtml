@@ -252,5 +252,36 @@
     </div>
 
 
+
+
+
+
+
+
+
+
+    @*Footer - start*@
+    <footer class="border-top footer text-muted">
+        <div class="container text-center">
+
+            &copy;
+
+            @{
+                DateTime? timestamp = ViewData["CurrentTimestamp"] as DateTime?;
+                if (timestamp.HasValue)
+                {
+                    @timestamp.Value.Year
+                }
+                else
+                {
+                    <b>2024-2026</b>
+                }
+            }
+            Elliott Abrams Dental Office. All Rights Reserved.
+        </div>
+    </footer>
+    @*Footer - end*@
+
+
 </body>
 </html>
