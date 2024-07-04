@@ -1,0 +1,46 @@
+﻿
+
+
+
+.carouselHeight {
+    height: 569px;
+    object-fit: cover;
+    margin-right: 10px;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.border-left-custom {
+    border-left: 6px solid white !important;
+}
+.border-right-custom {
+    border-right: 6px solid white !important;
+}
+
+
+
+
+/* Styling for Get Directions, Request Appt, and Contact Us in all screens, see "id: 03" in _Layout.cshtml - start */
+.theContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.theColumn {
+    flex: 1 1 100%;
+}
+@media (min-width: 768px) {
+    .theColumn {
+        flex: 1 1 33.33333%;
+    }
+}
+/* Styling for Get Directions, Request Appt, and Contact Us in all screens - end */
