@@ -1,8 +1,348 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+
+
+<div id="juantiguila" class="carousel slide pb-5" data-bs-ride="carousel">
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#juantiguila" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#juantiguila" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#juantiguila" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <img src="../media/layout/logo.jpg" alt="Chicago" class="d-block w-100 carouselHeight ">
+    <div class="carousel-caption">
+        <h3 class="display-4">
+            Smile Makeover</h3>
+        <p>Winning Smiles</p>
+        <a class="btn btn-outline-secondary">
+            Cosmetic Dentistry
+        </a>
+    </div>
+    </div>
+
+
+    <div class="carousel-item">
+    <img src="../media/layout/logo.jpg" alt="Chicago" class="d-block w-100 carouselHeight">
+    <div class="carousel-caption">
+        <h3 class="display-4">
+            Braces</h3>
+        <p>Why wait to smile?</p>
+        <a class="btn btn-outline-secondary">
+            Our Services
+        </a>
+    </div>
+    </div>
+    
+    <div class="carousel-item">
+    <img src="../media/layout/logo.jpg" alt="Chicago" class="d-block w-100 carouselHeight">
+    <div class="carousel-caption">
+        <h3 class="display-4">
+            Family Dentist
+        </h3>
+        <p>
+            Easy to Find & Local
+        </p>
+        <a class="btn btn-outline-secondary">
+            Get Directions
+        </a>
+    </div>
+    </div>
+
+
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#juantiguila" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#juantiguila" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        @* col 1 *@
+        <div class="col col-12 col-md-6 col-lg-3">
+            <div class="text-center">
+                <strong class="subsubtitleDes">Welcome to</strong>
+            </div>
+            
+            <div class="subsubtitle text-center">
+                Elliott Abrams Dental Office
+            </div>
+            <p>
+                We are committed to providing quality healthcare to families located in the Los Angeles area and treat patients of all ages. We provide comprehensive solutions for our patients' oral health needs. Believing in the importance of listening to our patients, we take the time to truly understand each person's needs, goals, and lifestyle. By understanding our patients' objectives we can provide solutions that will improve their health while transforming their smile into something bright and beautiful.
+            </p>
+            <p>
+                Elliott Abrams Dental Office is located at  169 S Alvarado St Ste 103 Los Angeles, CA 90057. We are currently accepting new patients, and you can schedule an appointment by calling (213) 353-4723.
+            </p>
+        </div>
+
+
+        @* col 2 *@
+        <div class="col col-12 col-md-6 col-lg-3">
+            <img class="img-fluid text-center d-flex justify-content-center" src="~/media/layout/logo.jpg" alt="Logo" style="max-height: 200px" />
+            <h3 class="text-center subsubtitle">Our Team</h3>
+            <div>
+                Elliott Abrams Dental Office provide quality dental care to patients in the Los Angeles area, focusing on a comprehensive approach to oral health. By treating and educating patients, our team helps patients to stay healthy in between visits. Our staff understands the importance of listening to patients, helping them to feel comfortable and relaxed. This personal approach is evident in everything we do. From making an appointment, filling out paperwork, conducting an examination, and providing dental treatments, the staff at Elliott Abrams Dental Office take the time to connect with patients and give them the thoughtful attention they deserve. Our team is trained on advanced dental procedures and techniques so that patients can benefit from the latest in dental care.
+            </div>
+            <div class="text-center pb-2 pt-2">
+                <a class="btn btn-outline-secondary">About us</a>
+            </div>
+        </div>
+
+        
+
+        @* col 3 *@
+        <div class="col col-12 col-md-6 col-lg-3">
+            <img class="img-fluid text-center d-flex justify-content-center" src="~/media/layout/logo.jpg" alt="Logo" style="max-height: 200px" />
+            <h3 class="text-center subsubtitle">Our Services</h3>
+            <div>
+                Elliott Abrams Dental Office provides a wide variety of dental services and procedures to address all of our patients' dental health needs. By combining quality patient care with up-to-date technology, we are able to treat patients of all ages in a comfortable and relaxing setting. Our website includes information on the following items: Dentist, Cosmetic Dentist, Family Dentist, General Dentist, Emergency Dentist, Dental Implants, Teeth Whitening, Porcelain Veneers, Dentures, Dental Crowns and more. Our Dentist and expert staff are trained to not only treat patients but to identify what caused the health concern in the first place. This comprehensive approach sets patients of Elliott Abrams Dental Office on the road to recovery and long term oral health.
+            </div>
+            <div class="text-center pb-2 pt-2">
+                <a class="btn btn-outline-secondary">View Our Services</a>
+            </div>
+        </div>
+
+
+
+        @* col 4 *@
+        <div class="col col-12 col-md-6 col-lg-3">
+            <img class="img-fluid text-center d-flex justify-content-center" src="~/media/layout/logo.jpg" alt="Logo" style="max-height: 200px" />
+            <h3 class="text-center subsubtitle">Patient Information</h3>
+            <div>
+                When you walk into the office of Elliott Abrams Dental Office you will be immediately greeted by our friendly staff who are dedicated to making sure that you feel comfortable during your entire appointment. We understand that patients can feel anxious when going to the dentist, and our staff will take the time to listen to all of your concerns and help you understand exactly what your procedure is going to be like. At Elliott Abrams Dental Office we pride ourselves on being an affordable family dentist that accepts a variety of insurance plans and payment options like cash and credit cards, because we want to provide a beautiful, healthy smile to everyone in the Los Angeles area. Call Elliott Abrams Dental Office today at 213-353-4723 to see why we are the dentist of choice in the Los Angeles area.
+            </div>
+            <div class="text-center pb-2 pt-2">
+                <a class="btn btn-outline-secondary">View Our Services</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container pt-5 pb-5">
+        <div class="row text-center mt-5 pt-4 pr-4 pl-4">
+            <div class="col-12 ">
+                <h1 class="display-4">
+                    Our Office
+                </h1>
+            </div>
+        </div>
+
+        <div class="row text-center mb-2">
+            <div class="col-12 text-center">
+                <div class="subtitleDes text-center">
+                    Located in Los Angeles
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-3 mb-5">
+            <div class="col col-5"></div>
+            <div class="col col-2 text-center">
+
+                @*This is the line between the TITLE & SUB-TITLE*@
+                <hr class="my-1">
+
+            </div>
+            <div class="col col-5"></div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 pb-3">
+            <div class="col">
+                <div class="card border-0">
+                    <img src="../media/layout/logo.jpg" alt="Chicago" class="d-block w-100">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="row">
+                    <p>
+                        Our devotion to constantly improve our office, and ourselves, is what makes us stand out from ordinary dental practices. It’s something that a lot of our patients have picked up on, and we will continue to be the best dental practice that we possibly can!
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col col-6 col-md-4">
+                        <a class="btn btn-outline-secondary">Virtual Tour</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 pt-3 mb-5">
+            <div class="col">
+                <div class="card border-0">
+                    <img src="../media/layout/logo.jpg" alt="Chicago" class="d-block w-100 ">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0">
+                    <img src="../media/layout/logo.jpg" class="d-block w-100">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0">
+                    <img src="../media/layout/logo.jpg" alt="Chicago" class="d-block w-100">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-0">
+                    <img src="../media/layout/logo.jpg" alt="Chicago" class="d-block w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+@*Own Your Smile Today section*@
+<div class="container pt-5 pb-5">
+    <div class="row text-center mt-5 pt-4 pr-4 pl-4">
+        <div class="col-12 ">
+            <h1 class="display-4">
+                Own Your Smile Today
+            </h1>
+        </div>
+    </div>
+
+    <div class="row text-center mb-2">
+        <div class="col-12 text-center">
+            <div class="subtitleDes text-center">
+                General & Family Dentistry
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-3 mb-5">
+        <div class="col col-5"></div>
+        <div class="col col-2 text-center">
+
+            @*This is the line between the TITLE & SUB-TITLE*@
+            <hr class="my-1">
+
+        </div>
+        <div class="col col-5"></div>
+    </div>
+
+    <div class="row pb-5">
+        <div class="col col-2 col-md-2"></div>
+        <div class="col col-10 col-md-8">
+            Every dentist is capable of providing fundamental services necessary to maintain the oral health of their patients. These services usually fall under the category of general and family dentistry. If you haven’t been to a dentist in a long time, chances are you may need some extra care that Dr. Abrams will provide. First, he’ll provide an oral exam to diagnosis any problems. Next, you’ll likely need an x-ray so that the doctor can get a better look at your teeth and their underlying structures. Exams and x-rays are just the first steps on the way to achieving good oral health. Dr. Abrams will create a custom care plan for you, to help achieve a bright and healthy smile!
+        </div>
+        <div class="col col-2 col-md-2"></div>
+    </div>
+
+
+
+
+
+    
+    <div class="row">
+        <div class="col col-1 col-md-3">
+        </div>
+        <div class="col col-10 col-sm-4 col-md-1">
+            <a asp-action="Index">
+                <img class="img-fluid" src="~/media/home/ada.png" alt="Logo" style="max-height: 125px" />
+            </a>
+        </div>
+        <div class="col col-10 col-sm-4 col-md-1">
+            <a asp-action="Index">
+                <img class="img-fluid" src="~/media/home/carecredit.png" alt="Logo" style="max-height: 125px" />
+            </a>            
+        </div>
+        <div class="col col-10 col-sm-4 col-md-1">
+            <a asp-action="Index">
+                <img class="img-fluid" src="~/media/home/cda.png" alt="Logo" style="max-height: 125px" />
+            </a>
+        </div>
+        <div class="col col-10 col-sm-4 col-md-1">
+            <a asp-action="Index">
+                <img class="img-fluid" src="~/media/home/random.png" alt="Logo" style="max-height: 125px" />
+            </a>
+        </div>
+        <div class="col col-10 col-sm-4 col-md-1">
+            <a asp-action="Index">
+                <img class="img-fluid" src="~/media/home/invisalign.png" alt="Logo" style="max-height: 125px" />
+            </a>
+        </div>
+        <div class="col col-10 col-sm-4 col-md-1">
+            <a asp-action="Index">
+                <img class="img-fluid" src="~/media/home/lendingclub.png" alt="Logo" style="max-height: 125px" />
+            </a>            
+        </div>
+        <div class="col col-1 col-md-3">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="mt-4" style="height: 500px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1965.2824260461177!2d-118.27251292014134!3d34.06444097709695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c70b94a5df2d%3A0x7acbd1cc51cb0ca1!2sElliott%20Abrams%20Dental%20Office!5e0!3m2!1sen!2sus!4v1719123163602!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+
+
+
+
