@@ -283,5 +283,29 @@
     @*Footer - end*@
 
 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    @* Javascript script that closes the navigation bar while open when clicked outside of it, see the button in the nav bar above *@
+    <script>
+    $(document).ready(function() {
+        // Close the navbar menu when clicking outside of it
+        $(document).click(function(event) {
+            var clickTarget = $(event.target);
+            var navbarMenu = $('#navbarNav');
+            var navbarToggler = $('.navbar-toggler');
+
+            // Check if the click was outside of the navbar menu and navbar toggler button
+            if (!navbarMenu.is(clickTarget) && navbarMenu.has(clickTarget).length === 0 &&
+                !navbarToggler.is(clickTarget) && navbarToggler.has(clickTarget).length === 0) {
+                navbarMenu.collapse('hide');
+            }
+        });
+    });
+    </script>
+
+
 </body>
 </html>
